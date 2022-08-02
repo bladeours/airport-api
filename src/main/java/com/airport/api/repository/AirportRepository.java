@@ -12,4 +12,6 @@ public interface AirportRepository extends MongoRepository<Airport, String> {
 
     @Override
     List<Airport> findAll();
+
+
 }

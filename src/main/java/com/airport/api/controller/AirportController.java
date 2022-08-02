@@ -27,4 +27,5 @@ public class AirportController {
     public Airport findByCode(@PathVariable String code){
         return airportService.findByCode(code.toUpperCase());
     }
+
 }

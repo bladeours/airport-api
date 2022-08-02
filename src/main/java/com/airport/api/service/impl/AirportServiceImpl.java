@@ -1,9 +1,9 @@
 package com.airport.api.service.impl;
 
+import com.airport.api.dto.DistanceDTO;
 import com.airport.api.model.Airport;
 import com.airport.api.repository.AirportRepository;
 import com.airport.api.service.AirportService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,4 +26,8 @@ public class AirportServiceImpl implements AirportService {
     public Airport findByCode(String code) {
         return airportRepository.findByCode(code);
     }
+
+
+
+
 }
