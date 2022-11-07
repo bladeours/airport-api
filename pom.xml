@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.airport</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>airportApi</artifactId>
     <version>0.0.1</version>
     <name>airportApi</name>
     <description>airportApi</description>
