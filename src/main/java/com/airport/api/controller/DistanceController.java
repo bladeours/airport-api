@@ -20,6 +20,6 @@ public class DistanceController {
 
     @GetMapping("/{departure}/{arrival}")
     public DistanceDTO findDistance(@PathVariable String departure, @PathVariable String arrival){
-        return distanceService.findDistance(departure, arrival);
+        return distanceService.findDistance(departure.toUpperCase(), arrival.toUpperCase());
     }
 }
