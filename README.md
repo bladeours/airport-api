@@ -25,7 +25,22 @@ show information about country or city of airport. It uses mongoDB database to s
 // TODO
 
 ## Setup
-// TODO
+
+### install on local machine
+
+#### install mongoDB
+* check official [mongoDB documentation](https://www.mongodb.com/docs/manual/installation/)
+
+#### import collection
+* [create database](https://www.mongodb.com/basics/create-database) with name `airport`
+* on Windows download [Database Tools](https://www.mongodb.com/try/download/database-tools)
+* on linux install `mongo-tools`
+* import json file `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER_NAME>/airport --collection airport --type json --file airport.json --jsonArray`
+
+#### run API
+**this app requires Java 17**
+* `java -jar airportApi.jar`
+
 
 ## endpoints
 
