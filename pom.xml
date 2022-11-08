@@ -12,6 +12,7 @@
     <artifactId>airportApi</artifactId>
     <version>0.0.1</version>
     <name>airportApi</name>
+
     <description>airportApi</description>
     <properties>
         <java.version>17</java.version>
@@ -47,6 +48,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>${project.artifactId}</finalName>
     </build>
 
 </project>
