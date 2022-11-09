@@ -3,8 +3,10 @@ version: '3'
 services:
   mongo:
     image: mongo:3.4
+    container_name: mongoDB
 
   mongo-seed:
+    container_name: mongo-seed
     image: fvilers/mongo-seed
     environment:
       - MONGO_HOST=mongo
@@ -12,7 +14,7 @@ services:
     volumes:
       - ./database:/database
     command:
-      "mongoimport --host mongo --port 27017 --db airport --mode upsert --type json --file database/airport.json --jsonArray"
+      "mongoimport --host mongo --port 27017 --db airport --mode upsert --type json --file database/airport.json --jsonArray --drop"
     depends_on:
       - mongo
 
@@ -20,5 +22,6 @@ services:
     image: airport-api
     ports:
       - "8081:8081"
+    container_name: airport-api
 
 
