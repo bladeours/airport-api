@@ -41,6 +41,8 @@ show information about country or city of airport. It uses mongoDB database to s
 **this app requires Java 17**
 * `java -jar airportApi.jar`
 
+### run with Docker
+
 
 ## endpoints
 

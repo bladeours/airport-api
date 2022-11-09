@@ -19,7 +19,7 @@ services:
       - mongo
 
   api:
-    image: airport-api
+    image: bladeours/airport-api
     ports:
       - "8081:8081"
     container_name: airport-api
