@@ -26,24 +26,24 @@ show information about country or city of airport. It uses mongoDB database to s
 
 ## Setup
 
-### install on local machine
+### Install on local machine
 
-#### install mongoDB
+#### Install mongoDB
 * check official [mongoDB documentation](https://www.mongodb.com/docs/manual/installation/)
 
-#### import collection
+#### Import collection
 * [create database](https://www.mongodb.com/basics/create-database) with name `airport`
 * on Windows download [Database Tools](https://www.mongodb.com/try/download/database-tools)
 * on linux install `mongo-tools`
 * import json file `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER_NAME>/airport --collection airport --type json --file airport.json --jsonArray`
 
-#### run API
+#### Run API
 **this app requires Java 17**
 * `java -jar airportApi.jar`
 
-### run with Docker
+### Run with Docker
 
-## docker-compose
+#### Docker-compose
 
 * `git clone https://github.com/bladeours/airport-api.git`
 * `docker-compose -d` 
@@ -52,7 +52,7 @@ App runs on 8081 port. I needed to use `fvilers/mongo-seed` image because
 it's the best way to import data to mongoDB in container. `mongo` container 
 starts, then `mongo-seed` import data to `mongo` and shutdowns.
 
-## endpoints
+## Endpoints
 
 ### Airport
 
