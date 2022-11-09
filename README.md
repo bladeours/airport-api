@@ -43,6 +43,14 @@ show information about country or city of airport. It uses mongoDB database to s
 
 ### run with Docker
 
+## docker-compose
+
+* `git clone https://github.com/bladeours/airport-api.git`
+* `docker-compose -d` 
+
+App runs on 8081 port. I needed to use `fvilers/mongo-seed` image because 
+it's the best way to import data to mongoDB in container. `mongo` container 
+starts, then `mongo-seed` import data to `mongo` and shutdowns.
 
 ## endpoints
 
