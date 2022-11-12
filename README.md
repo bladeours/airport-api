@@ -3,10 +3,10 @@ Simple REST API that returns information about airports.
 
 ## Table of Contents
 * [General info](#general-info)
-* [Authorization](#authorization)
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
 * [Endpoints](#endpoints)
+* [Authorization](#authorization)
 
 
 ## General Info
@@ -21,8 +21,6 @@ show information about country or city of airport. It uses mongoDB database to s
 * Java 17
 * MongoDB
 
-## Authorization
-// TODO
 
 ## Setup
 
@@ -48,7 +46,7 @@ show information about country or city of airport. It uses mongoDB database to s
 * `git clone https://github.com/bladeours/airport-api.git`
 * `docker-compose -d` 
 
-App runs on 8081 port. I needed to use `fvilers/mongo-seed` image because 
+App runs on 8081 port, but you can change it in `.env` file. I needed to use `fvilers/mongo-seed` image because 
 it's the best way to import data to mongoDB in container. `mongo` container 
 starts, then `mongo-seed` import data to `mongo` and shutdowns.
 
@@ -110,3 +108,5 @@ return distance between two airports in km \
 }
 ```
 
+## Authorization
+// TODO
