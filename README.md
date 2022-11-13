@@ -23,9 +23,17 @@ show information about country or city of airport. It uses mongoDB database to s
 
 
 ## Setup
+### Run with Docker
+#### Docker-compose
+
+* `git clone https://github.com/bladeours/airport-api.git`
+* `docker-compose -d` 
+
+App runs on 8081 port, but you can change it in `.env` file. I needed to use `fvilers/mongo-seed` image because 
+it's the best way to import data to mongoDB in container. `mongo` container 
+starts, then `mongo-seed` import data to `mongo` and shutdowns.
 
 ### Install on local machine
-
 #### Install mongoDB
 * check official [mongoDB documentation](https://www.mongodb.com/docs/manual/installation/)
 
@@ -39,16 +47,7 @@ show information about country or city of airport. It uses mongoDB database to s
 **this app requires Java 17**
 * `java -jar airportApi.jar`
 
-### Run with Docker
 
-#### Docker-compose
-
-* `git clone https://github.com/bladeours/airport-api.git`
-* `docker-compose -d` 
-
-App runs on 8081 port, but you can change it in `.env` file. I needed to use `fvilers/mongo-seed` image because 
-it's the best way to import data to mongoDB in container. `mongo` container 
-starts, then `mongo-seed` import data to `mongo` and shutdowns.
 
 ## Endpoints
 
