@@ -26,8 +26,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: 'flightApi.jar'
-          path: target/flightApi.jar
+          name: 'airportApi.jar'
+          path: target/airportApi.jar
   create-release:
     needs: build
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: 'flightApi.jar'
+          name: 'airportApi.jar'
           path: target
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
@@ -51,6 +51,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/flightApi.jar
-          asset_name: flightApi-${{ github.ref_name }}.jar
+          asset_path: target/airport.jar
+          asset_name: airportApi-${{ github.ref_name }}.jar
           asset_content_type: application/java-archive
